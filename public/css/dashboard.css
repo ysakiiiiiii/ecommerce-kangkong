@@ -1,0 +1,162 @@
+/* Section container styles */
+
+:root{
+  --bg2-clr            : #dbe2e9;
+  --bg-clr             : #f6f6f6;
+  --text-clr           : #757575;
+  --highlight-clr      : #000;
+  --blue-color         : #6059f7;
+  --darkblue-color     : #355c7d;
+  --darkpurple-color   : #725a7a;
+  --rose-color         : #c56c86;
+  --brightred-color    : #ff7582;
+  --purple-color       : #7367f0;
+  --light-color        : rgba(132, 139, 200, 0.18);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+section {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+ }
+ 
+ /* Welcome section styles */
+ .welcome {
+   background: rgb(115,103,240);
+   background: linear-gradient(146deg, rgba(115,103,240,1) 0%, rgba(206,159,252,1) 50%, rgba(115,103,240,1) 100%);
+   color: #fff;
+   padding: 15px;
+   border-radius: 8px;
+   box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.47);
+   -webkit-box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.47);
+   -moz-box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.47);
+   font-size: 2vh;
+ }
+ 
+ .welcome p:first-child {
+   font-size: 1.5rem;
+   font-weight: 600;
+   margin: 0;
+   line-height: 1.6;
+ }
+ 
+ .dashboard-text-head{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 10px;
+ }
+
+ .vertical-line{
+   height: 35px;
+   width: 5px;
+   background-color: var(--blue-color);
+ }
+
+ .text-dashboard {
+   font-size: 2.5rem;
+   font-weight: bold;
+ }
+
+ .data-analytics{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+ }
+
+ .data-analytics h3{
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+ }
+
+ .data-analytics h1{
+  font-weight: 700;
+  font-size: 2rem
+ }
+ 
+ .data-analytics > div{
+  max-width: 100%;
+  background-color: var(--bg-clr);
+  padding: 1.6rem;
+  border-radius: 2rem;
+  box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.47);
+  -webkit-box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.47);
+  -moz-box-shadow: -1px 3px 11px 0px rgba(0,0,0,0.47);
+ }
+
+ .data-analytics span {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(115,103,240);
+  background: linear-gradient(146deg, rgba(115,103,240,1) 0%, rgba(206,159,252,1) 100%);
+  transition: background-color 0.3s ease;
+}
+
+.data-analytics span > svg{
+  fill: var(--bg-clr);
+}
+
+.data-analytics > div .middle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data-analytics > div .progress {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-analytics > div .progress svg {
+  width: 80px;
+  height: 80px;
+  overflow: visible;
+}
+
+.data-analytics > div .progress circle {
+  fill: none;
+  stroke-width: 8;
+  stroke: var(--bg2-clr); 
+  stroke-dashoffset: 100; 
+  transition: stroke 0.3s ease;
+}
+
+.data-analytics > div .number {
+  position: absolute;
+  color: var(--blue-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+}
+
+.data-analytics .progress[data-percentage="78"] .circle-total-sales {
+  stroke: var(--blue-color);
+  stroke-dasharray: 226.195;
+  stroke-dashoffset: 48.9;
+}
+
+.data-analytics .progress[data-percentage="80"] .circle-total-order {
+  stroke: var(--purple-color); 
+  stroke-dasharray: 226.195;
+  stroke-dashoffset: 90.24; 
+}
+.data-analytics .progress[data-percentage="80"] .circle-orders-sold {
+  stroke: var(--purple-color); 
+  stroke-dasharray: 226.195;
+  stroke-dashoffset: 50.24; 
+}
